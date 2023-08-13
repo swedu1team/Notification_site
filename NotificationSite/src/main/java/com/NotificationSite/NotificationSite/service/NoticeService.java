@@ -10,7 +10,13 @@ public class NoticeService {
     @Autowired
     private NoticeRepository noticeRepository;
 
+    //공지사항 작성
     public void write(Notice notice){
         noticeRepository.save(notice);
+    }
+
+    //공지사항 세부
+    public Notice noticeView(Integer NOTICE_ID){
+        return noticeRepository.findById(NOTICE_ID).get();
     }
 }

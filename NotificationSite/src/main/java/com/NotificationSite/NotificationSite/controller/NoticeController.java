@@ -4,6 +4,7 @@ import com.NotificationSite.NotificationSite.entity.Notice;
 import com.NotificationSite.NotificationSite.service.NoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -25,5 +26,12 @@ public class NoticeController {
     public String noticeWritePro(Notice notice){
         noticeService.write(notice);
         return "noticelist";
+    }
+
+    //공지사항 상세
+    @GetMapping("notice/noticeview")
+    public String noticeView(Model model, Integer NOTICE_ID){
+        model.addAttribute("Notice",noticeService.noticeView(NOTICE_ID));
+        return "noticeview";
     }
 }
