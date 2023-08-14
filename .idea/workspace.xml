@@ -160,7 +160,7 @@
       <workItem from="1691989600634" duration="1690000" />
       <workItem from="1691991384814" duration="439000" />
       <workItem from="1691991856591" duration="2139000" />
-      <workItem from="1691994235676" duration="3485000" />
+      <workItem from="1691994235676" duration="4188000" />
     </task>
     <task id="LOCAL-00001" summary="공지사항목록, 회원가입 DB 생성">
       <created>1691986771724</created>
@@ -169,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691986771725</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="회원가입기능 추가">
+      <created>1692000369465</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692000369465</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +195,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="공지사항목록, 회원가입 DB 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="공지사항목록, 회원가입 DB 생성" />
+    <MESSAGE value="회원가입기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입기능 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
