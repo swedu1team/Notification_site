@@ -37,8 +37,8 @@
       <list>
         <option value="Interface" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -160,7 +160,8 @@
       <workItem from="1691989600634" duration="1690000" />
       <workItem from="1691991384814" duration="439000" />
       <workItem from="1691991856591" duration="2139000" />
-      <workItem from="1691994235676" duration="6074000" />
+      <workItem from="1691994235676" duration="7238000" />
+      <workItem from="1692017134700" duration="1631000" />
     </task>
     <task id="LOCAL-00001" summary="공지사항목록, 회원가입 DB 생성">
       <created>1691986771724</created>
@@ -183,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692000803112</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="signup_form.html 추가">
+      <created>1692003399733</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692003399733</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +212,8 @@
     <MESSAGE value="공지사항목록, 회원가입 DB 생성" />
     <MESSAGE value="회원가입기능 추가" />
     <MESSAGE value="의존성 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="의존성 수정" />
+    <MESSAGE value="signup_form.html 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="signup_form.html 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

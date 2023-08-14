@@ -18,11 +18,20 @@ public class UserController {
 
     private final UserService userService;
 
+
+    // 로그인 URL
+    @GetMapping("/login")
+    public String login() {
+        return "login_form";
+    }
+
+    // 회원가입 페이지
     @GetMapping("/signup")
     public String signup(UserCreateForm userCreateForm) {
         return "signup_form";
     }
 
+    //회원가입 폼
     @PostMapping("/signup")
     public String signup(@Valid UserCreateForm userCreateForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
