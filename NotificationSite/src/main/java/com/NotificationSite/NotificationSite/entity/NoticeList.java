@@ -1,16 +1,11 @@
 package com.NotificationSite.NotificationSite.entity;
 
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import org.hibernate.annotations.Entity;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Getter
@@ -18,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 public class NoticeList     {
 
-    @javax.persistence.Id
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
