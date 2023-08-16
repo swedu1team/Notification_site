@@ -46,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/backend_develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -247,7 +247,8 @@
     <MESSAGE value="의존성 수정" />
     <MESSAGE value="signup_form.html 추가" />
     <MESSAGE value="로그인, 로그아웃 기능 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인, 로그아웃 기능 추가" />
+    <MESSAGE value="FIX: gitignore 보안 관련 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: gitignore 보안 관련 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
