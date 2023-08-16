@@ -2,7 +2,9 @@ package com.NotificationSite.NotificationSite.controller;
 
 import com.NotificationSite.NotificationSite.Form.UserCreateForm;
 import com.NotificationSite.NotificationSite.service.UserService;
-import jakarta.validation.Valid;
+//import io.swagger.v3.oas.annotations.Operation;
+//import io.swagger.v3.oas.annotations.tags.Tag;
+//import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
+
+
+//@Tag(name = "회원가입 관련", description = "회원가입 관련 API")
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("/user")
@@ -20,18 +26,21 @@ public class UserController {
 
 
     // 로그인 URL
+    //@Operation(summary = "로그인")
     @GetMapping("/login")
     public String login() {
         return "login_form";
     }
 
     // 회원가입 페이지
+    //@Operation(summary = "회원가입")
     @GetMapping("/signup")
     public String signup(UserCreateForm userCreateForm) {
         return "signup_form";
     }
 
     //회원가입 폼
+    //@Operation(summary = "회원가입 완료")
     @PostMapping("/signup")
     public String signup(@Valid UserCreateForm userCreateForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -59,4 +68,9 @@ public class UserController {
 
         return "redirect:/";
     }
+
+   /* @GetMapping("/login")
+    public String oauthLogin(){
+        return "login_form";
+    }*/
 }

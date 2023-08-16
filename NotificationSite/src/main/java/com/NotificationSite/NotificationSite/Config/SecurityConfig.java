@@ -1,27 +1,55 @@
 package com.NotificationSite.NotificationSite.Config;
 
+
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.security.ConditionalOnDefaultWebSecurity;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
+import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
+import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+
 // 스프링 시큐리티 설정 클래스
+@EnableMethodSecurity
+@RequiredArgsConstructor
 @Configuration
-@EnableWebSecurity
 public class SecurityConfig {
+
+    private final OAuth2UserService oAuth2UserService;
+    private final ObjectMapper objectMapper;
+
+
     @Bean
-    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
-                        .requestMatchers(new AntPathRequestMatcher("/**")).permitAll())
-                .csrf((csrf) -> csrf
+                        .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()) // 시큐리티 로그인 끄기
+                .csrf((csrf) -> csrf // csrf 끄기
                         .ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**")))
                 .headers((headers) -> headers
                         .addHeaderWriter(new XFrameOptionsHeaderWriter(
@@ -29,12 +57,32 @@ public class SecurityConfig {
                 .formLogin((formLogin) -> formLogin
                         .loginPage("/user/login")
                         .defaultSuccessUrl("/"))
+                .oauth2Login(oauth2Configurer -> oauth2Configurer
+                        .loginPage("/login")
+                        .successHandler(successHandler())
+                        .userInfoEndpoint()// 스프링 부트 3.x버젼을 사용하면 userInfoEndpoint메서드 사용 불가 2.7.4로 다운
+                        .userService(oAuth2UserService))
                 .logout((logout) -> logout
-                        .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout"))
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout")) // 로그아웃 경로
                         .logoutSuccessUrl("/")
                         .invalidateHttpSession(true))
         ;
         return http.build();
+    }
+
+    @Bean
+    public AuthenticationSuccessHandler successHandler() {
+        return new AuthenticationSuccessHandler() {
+            @Override
+            public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+                DefaultOAuth2User defaultOAuth2User = (DefaultOAuth2User) authentication.getPrincipal();
+
+                response.setContentType("text/html; charset=utf-8");
+                response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+                objectMapper.writeValue(response.getWriter(), defaultOAuth2User);
+
+            }
+        };
     }
 
     @Bean
@@ -46,4 +94,13 @@ public class SecurityConfig {
     AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
+
+    // Swagger URL 접근 허용
+    private static final String[] URL_TO_PERMIT = {
+            "/user/login",
+            "/user/signup",
+            "/v3/api-docs/**",
+            "/swagger-ui/**",
+            "/auth/**"
+    };
 }

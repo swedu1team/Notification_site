@@ -1,10 +1,14 @@
 package com.NotificationSite.NotificationSite.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id; // 올바른 import 추가
+
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 @Data
