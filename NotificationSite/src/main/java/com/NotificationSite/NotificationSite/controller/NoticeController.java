@@ -2,25 +2,29 @@ package com.NotificationSite.NotificationSite.controller;
 
 import com.NotificationSite.NotificationSite.entity.Notice;
 import com.NotificationSite.NotificationSite.service.NoticeService;
-import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-
-import javax.management.loading.PrivateClassLoader;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class NoticeController {
     @Autowired
     private NoticeService noticeService;
 
+    @GetMapping
+    public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+        Page<Notice> paging = this.noticeService.getList(page);
+        model.addAttribute("paging", paging);
+        return "notice_list";
+    }
+
+
     //공지사항 작성 html과 연결
     @GetMapping("notice/noticewrite")
-    public String noticeWriteForm(){
+    public String noticeWriteForm() {
+
         return "noticewrite";
     }
 
@@ -28,7 +32,7 @@ public class NoticeController {
     @PostMapping("notice/noticewritepro")
     public String noticeWritePro(Notice notice){
         noticeService.write(notice);
-        return "noticelist";
+        return "notice_list";
     }
 
     //공지사항 상세
@@ -56,6 +60,6 @@ public class NoticeController {
 
         noticeService.write(temp);
 
-        return "noticelist";
+        return "notice_list";
     }
 }
