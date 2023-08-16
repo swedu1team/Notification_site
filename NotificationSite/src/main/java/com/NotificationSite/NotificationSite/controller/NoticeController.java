@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@RequestMapping("/notice")
 @Controller
 public class NoticeController {
     @Autowired
@@ -22,34 +23,34 @@ public class NoticeController {
 
 
     //공지사항 작성 html과 연결
-    @GetMapping("notice/noticewrite")
+    @GetMapping("/noticewrite")
     public String noticeWriteForm() {
 
         return "noticewrite";
     }
 
     //공지사항 작성 기능
-    @PostMapping("notice/noticewritepro")
+    @PostMapping("/noticewritepro")
     public String noticeWritePro(Notice notice){
         noticeService.write(notice);
         return "notice_list";
     }
 
     //공지사항 상세
-    @GetMapping("notice/noticeview")
+    @GetMapping("/noticeview")
     public String noticeView(Model model, Integer NOTICE_ID){
         model.addAttribute("Notice",noticeService.noticeView(NOTICE_ID));
         return "noticeview";
     }
 
     //공지사항 수정
-    @GetMapping("notice/noticemodify/{NOTICE_ID}")
+    @GetMapping("/noticemodify/{NOTICE_ID}")
     public String noticeModify(Model model, @PathVariable("NOTICE_ID") Integer NOTICE_ID){
         model.addAttribute("Notice",noticeService.noticeView(NOTICE_ID));
         return "noticemodify";
     }
 
-    @PostMapping("notice/noticeupdate/{NOTICE_ID}")
+    @PostMapping("/noticeupdate/{NOTICE_ID}")
     public String noticeUpdate(@PathVariable("NOTICE_ID") Integer NOTICE_ID, Notice notice){
         //수정된 내용 업데이트
         Notice temp = noticeService.noticeView(NOTICE_ID);
