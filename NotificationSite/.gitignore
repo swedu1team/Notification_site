@@ -36,3 +36,6 @@ application-info.properties
 
 ### VS Code ###
 .vscode/
+
+# Spring Security OAuth2 config
+src/main/resources/application.yml
