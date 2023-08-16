@@ -1,51 +1,57 @@
 package com.NotificationSite.NotificationSite.controller;
 
 import com.NotificationSite.NotificationSite.entity.Notice;
+import com.NotificationSite.NotificationSite.entity.NoticeList;
 import com.NotificationSite.NotificationSite.service.NoticeService;
-import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-import javax.management.loading.PrivateClassLoader;
-
+@RequestMapping("/notice")
 @Controller
 public class NoticeController {
     @Autowired
     private NoticeService noticeService;
 
+    @GetMapping
+    public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+        Page<NoticeList> paging = this.noticeService.getList(page);
+        model.addAttribute("paging", paging);
+        return "notice_list";
+    }
+
+
     //공지사항 작성 html과 연결
-    @GetMapping("notice/noticewrite")
-    public String noticeWriteForm(){
+    @GetMapping("/noticewrite")
+    public String noticeWriteForm() {
+
         return "noticewrite";
     }
 
     //공지사항 작성 기능
-    @PostMapping("notice/noticewritepro")
+    @PostMapping("/noticewritepro")
     public String noticeWritePro(Notice notice){
         noticeService.write(notice);
-        return "noticelist";
+        return "notice_list";
     }
 
     //공지사항 상세
-    @GetMapping("notice/noticeview")
+    @GetMapping("/noticeview")
     public String noticeView(Model model, Integer NOTICE_ID){
         model.addAttribute("Notice",noticeService.noticeView(NOTICE_ID));
         return "noticeview";
     }
 
     //공지사항 수정
-    @GetMapping("notice/noticemodify/{NOTICE_ID}")
+    @GetMapping("/noticemodify/{NOTICE_ID}")
     public String noticeModify(Model model, @PathVariable("NOTICE_ID") Integer NOTICE_ID){
         model.addAttribute("Notice",noticeService.noticeView(NOTICE_ID));
         return "noticemodify";
     }
 
-    @PostMapping("notice/noticeupdate/{NOTICE_ID}")
+    @PostMapping("/noticeupdate/{NOTICE_ID}")
     public String noticeUpdate(@PathVariable("NOTICE_ID") Integer NOTICE_ID, Notice notice){
         //수정된 내용 업데이트
         Notice temp = noticeService.noticeView(NOTICE_ID);
@@ -56,6 +62,6 @@ public class NoticeController {
 
         noticeService.write(temp);
 
-        return "noticelist";
+        return "notice_list";
     }
 }

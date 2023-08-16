@@ -9,6 +9,6 @@ public class testController {
     @GetMapping("/test")
     @ResponseBody
     public String testCode() {
-        return "This is test page";
+        return "카카오 Oauth test";
     }
 }

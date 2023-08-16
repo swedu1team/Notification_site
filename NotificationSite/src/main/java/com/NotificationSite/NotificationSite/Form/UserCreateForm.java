@@ -1,13 +1,14 @@
 package com.NotificationSite.NotificationSite.Form;
 
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Getter
 @Setter
