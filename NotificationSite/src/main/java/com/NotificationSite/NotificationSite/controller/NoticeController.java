@@ -1,6 +1,7 @@
 package com.NotificationSite.NotificationSite.controller;
 
 import com.NotificationSite.NotificationSite.entity.Notice;
+import com.NotificationSite.NotificationSite.entity.NoticeList;
 import com.NotificationSite.NotificationSite.service.NoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,7 +17,7 @@ public class NoticeController {
 
     @GetMapping
     public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
-        Page<Notice> paging = this.noticeService.getList(page);
+        Page<NoticeList> paging = this.noticeService.getList(page);
         model.addAttribute("paging", paging);
         return "notice_list";
     }
