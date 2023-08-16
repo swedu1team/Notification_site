@@ -9,7 +9,7 @@ spring:
             client-name: kakao
             client-authentication-method: client_secret_pos
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8080/test
+            redirect-uri: http://localhost:8080/notice/list
             scope:
               - profile_image
               - profile_nickname
@@ -20,7 +20,7 @@ spring:
             client-name: naver
             client-authentication-method: client_secret_post
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8080/test
+            redirect-uri: http://localhost:8080/notice/list
             scope:
               - name
               - email

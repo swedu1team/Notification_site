@@ -15,7 +15,7 @@ public class NoticeController {
     @Autowired
     private NoticeService noticeService;
 
-    @GetMapping
+    @GetMapping("/list")
     public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
         Page<NoticeList> paging = this.noticeService.getList(page);
         model.addAttribute("paging", paging);
