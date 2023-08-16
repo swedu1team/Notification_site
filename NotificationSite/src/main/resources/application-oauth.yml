@@ -4,8 +4,8 @@ spring:
       client:
         registration:
           kakao:
-            client-id: 3e644b4cfe7ccd04e6be5b922c76c3ef
-            client-secret: TQQa3F6vRpYjnpT6e5TyRXPhXheIk2Jt
+            client-id: id 입력
+            client-secret: 키 입력
             client-name: kakao
             client-authentication-method: client_secret_pos
             authorization-grant-type: authorization_code
@@ -15,8 +15,8 @@ spring:
               - profile_nickname
               - account_email
           naver:
-            client-id: uAd5d4n05PtYcMcWNmdG
-            client-secret: u981K9YON4
+            client-id: id입력
+            client-secret: 키 입력
             client-name: naver
             client-authentication-method: client_secret_post
             authorization-grant-type: authorization_code
