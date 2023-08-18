@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="" />
+    <list default="true" id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-08-16_PM_11_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-08-16_PM_11_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/DataNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Form/NoticeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Form/NoticeForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/Notice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/SiteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/SiteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/service/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/application-oauth.yml" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/application-oauth.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticemodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticemodify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticeview.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticeview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticewrite.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticewrite.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,36 +77,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/고병국/project/sbb",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "4289253d6e3899ba045b2f165b07ccd3",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.NotificationSite.NotificationSite.Form" />
@@ -98,18 +88,22 @@
       <recent name="C:\Users\고병국\project\Notification_site\NotificationSite\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotificationSiteApplication">
+  <component name="RunManager" selected="Application.NotificationSiteApplication">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
       <option name="appServicePlanResourceGroup" />
+      <option name="appSettings">
+        <map />
+      </option>
       <option name="appSettingsKey" value="e85886a2-b417-44c2-977a-8c11840d36f9" />
       <option name="artifact" />
+      <option name="autoPort" value="true" />
       <option name="debugOptions" />
       <option name="deployment" />
       <option name="deploymentStagingDirectoryPath" />
       <option name="funcPath" />
-      <option name="functionHostArguments" />
+      <option name="funcPort" value="0" />
       <option name="hostJsonPath" />
       <option name="insightsName" />
       <option name="instrumentationKey" />
@@ -128,6 +122,40 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="NotificationSiteApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.NotificationSite.NotificationSite.NotificationSiteApplication" />
+      <module name="NotificationSite.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.NotificationSite.NotificationSite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationSite [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NotificationSite" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="NoticeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NotificationSite.test" />
@@ -159,11 +187,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NotificationSiteApplication" />
+        <item itemvalue="Application.NotificationSiteApplication" />
+        <item itemvalue="Gradle.NotificationSite [dependencies]" />
         <item itemvalue="JUnit.NoticeControllerTest" />
-        <item itemvalue="Spring Boot.NotificationSiteApplication" />
-        <item itemvalue="Spring Boot.NotificationSiteApplication" />
-        <item itemvalue="Spring Boot.NotificationSiteApplication" />
       </list>
     </recent_temporary>
   </component>

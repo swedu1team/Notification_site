@@ -49,7 +49,8 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
                         .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()) // 시큐리티 로그인 끄기
-                .csrf().disable() // csrf 비활성화
+                .csrf((csrf) -> csrf // csrf 끄기
+                        .ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**")))
                 .headers((headers) -> headers
                         .addHeaderWriter(new XFrameOptionsHeaderWriter(
                                 XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
@@ -75,12 +76,12 @@ public class SecurityConfig {
             @Override
             public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                 // JSON 응답 대신 리다이렉트를 수행
-                response.sendRedirect("/notice/noticewrite"); // 원하는 페이지로 수정
+//                response.sendRedirect("/notice/noticewrite"); // 원하는 페이지로 수정
 
                 // 기존의 JSON 응답 부분은 주석 처리
-                // DefaultOAuth2User defaultOAuth2User = (DefaultOAuth2User) authentication.getPrincipal();
-                // response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-                // objectMapper.writeValue(response.getWriter(), defaultOAuth2User);
+                 DefaultOAuth2User defaultOAuth2User = (DefaultOAuth2User) authentication.getPrincipal();
+                 response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+                 objectMapper.writeValue(response.getWriter(), defaultOAuth2User);
             }
         };
     }

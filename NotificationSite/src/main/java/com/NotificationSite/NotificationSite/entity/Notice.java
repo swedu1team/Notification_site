@@ -1,29 +1,31 @@
 package com.NotificationSite.NotificationSite.entity;
 
-
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Notice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer NOTICE_ID; //공지 번호
+    private Integer id; //공지 번호
 
-    private String CONTENT; // 공지 내용
+    private Date meetDay;
 
-    // private String USER_ID; // 작성자 id
+    @Column(length = 200)
+    private String meetSubject; //공지 제목
 
-    private String MEET_DAY; //공지 날짜
+    @Column(length = 200)
+    private String meetPlace; // 공지 장소
 
-    private String MEET_PLACE; // 공지 장소
+    @Column(length = 200)
+    private String content; //공지 내용
 
-    private String MEET_SUBJECT; //공지 제목
-
-   @ManyToOne
-    private SiteUser author; // 유저 정보
+    @ManyToOne
+    @JoinColumn(name = "username", referencedColumnName = "username")
+    private SiteUser username;
 }
