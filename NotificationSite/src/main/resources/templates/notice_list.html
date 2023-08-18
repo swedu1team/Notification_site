@@ -31,53 +31,43 @@
 
 </style>
 <div layout:fragment="content" class="container my-3">
-  <table class="table">
-    <thead class="table-dark">
-    <tr class="text-center">
-      <th>번호</th>
-      <th style="width:50%">제목</th>
-      <th>작성자</th>
-      <th>작성일시</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="text-center" th:each="noticeList, loop : ${paging}">
-      <td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
-      <td class="text-start">
-        <a th:href="@{|/noticeList/detail/${noticeList.id}|}" th:text="${noticeList.title}"></a>
-        <span class="text-danger small ms-2"
-              th:if="${#lists.size(noticeList.answerList) > 0}"
-              th:text="${#lists.size(noticeList.answerList)}">
-        </span>
-      </td>
-      <td><span th:if="${noticeList.author != null}" th:text="${noticeList.author.username}"></span></td>
-      <td th:text="${#temporals.format(noticeList.createDate, 'yyyy-MM-dd HH:mm')}"></td>
-    </tr>
-    </tbody>
-  </table>
-  <!-- 페이징처리 시작 -->
-  <div th:if="${!paging.isEmpty()}">
-    <ul class="pagination justify-content-center">
-      <li class="page-item" th:classappend="${!paging.hasPrevious} ? 'disabled'">
-        <a class="page-link"
-           th:href="@{|?page=${paging.number-1}|}">
-          <span>이전</span>
-        </a>
-      </li>
-      <li th:each="page: ${#numbers.sequence(0, paging.totalPages-1)}"
-          th:if="${page >= paging.number-5 and page <= paging.number+5}"
-          th:classappend="${page == paging.number} ? 'active'"
-          class="page-item">
-        <a th:text="${page}" class="page-link" th:href="@{|?page=${page}|}"></a>
-      </li>
-      <li class="page-item" th:classappend="${!paging.hasNext} ? 'disabled'">
-        <a class="page-link" th:href="@{|?page=${paging.number+1}|}">
-          <span>다음</span>
-        </a>
-      </li>
-    </ul>
+  <div>
+    <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
   </div>
-  <!-- 페이징처리 끝 -->
+
+  <div>
+    <a href ="/oauth2/authorization/kakao">카카오 로그인</a>
+    <a href ="/oauth2/authorization/naver">네이버 로그인</a>
+  </div>
+
+  <div>
+    <a href="/user/signup">회원가입</a>
+  </div>
+
+  <div class="container">
+    <h2>공지사항 목록</h2>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>작성일시</th>
+        <th>장소</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="notice : ${notices}">
+        <td th:text="${notice.NOTICE_ID}"></td>
+        <td><a th:href="@{|/noticeList/detail/${notice.NOTICE_ID}|}" th:text="${notice.MEET_SUBJECT}"></a></td>
+        <td th:text="${notice.USER_ID}"></td>
+        <td th:text="${notice.MEET_DAY}"></td>
+        <td th:text="${notice.MEET_PLACE}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
   <a th:href="@{/notice/noticewrite}" class="btn btn-primary">공지사항 등록하기</a>
 </div>
 </html>

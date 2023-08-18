@@ -49,22 +49,21 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
                         .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()) // 시큐리티 로그인 끄기
-                .csrf((csrf) -> csrf // csrf 끄기
-                        .ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**")))
+                .csrf().disable() // csrf 비활성화
                 .headers((headers) -> headers
                         .addHeaderWriter(new XFrameOptionsHeaderWriter(
                                 XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
                 .formLogin((formLogin) -> formLogin
                         .loginPage("/user/login")
-                        .defaultSuccessUrl("/"))
-                .oauth2Login(oauth2Configurer -> oauth2Configurer
+                        .defaultSuccessUrl("/notice/list"))
+                .oauth2Login(oauth2Configurer -> oauth2Configurer // Oauth 로그인 관련 설정
                         .loginPage("/login")
                         .successHandler(successHandler())
                         .userInfoEndpoint()// 스프링 부트 3.x버젼을 사용하면 userInfoEndpoint메서드 사용 불가 2.7.4로 다운
                         .userService(oAuth2UserService))
                 .logout((logout) -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout")) // 로그아웃 경로
-                        .logoutSuccessUrl("/")
+                        .logoutSuccessUrl("/notice/list")
                         .invalidateHttpSession(true))
         ;
         return http.build();
@@ -75,12 +74,13 @@ public class SecurityConfig {
         return new AuthenticationSuccessHandler() {
             @Override
             public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-                DefaultOAuth2User defaultOAuth2User = (DefaultOAuth2User) authentication.getPrincipal();
+                // JSON 응답 대신 리다이렉트를 수행
+                response.sendRedirect("/notice/noticewrite"); // 원하는 페이지로 수정
 
-                response.setContentType("text/html; charset=utf-8");
-                response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-                objectMapper.writeValue(response.getWriter(), defaultOAuth2User);
-
+                // 기존의 JSON 응답 부분은 주석 처리
+                // DefaultOAuth2User defaultOAuth2User = (DefaultOAuth2User) authentication.getPrincipal();
+                // response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+                // objectMapper.writeValue(response.getWriter(), defaultOAuth2User);
             }
         };
     }

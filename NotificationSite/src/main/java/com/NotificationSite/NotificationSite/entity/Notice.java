@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -26,4 +23,7 @@ public class Notice {
     private String MEET_PLACE; // 공지 장소
 
     private String MEET_SUBJECT; //공지 제목
+
+   @ManyToOne
+    private SiteUser author; // 유저 정보
 }

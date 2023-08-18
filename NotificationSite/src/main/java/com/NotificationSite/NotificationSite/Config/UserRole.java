@@ -2,7 +2,7 @@ package com.NotificationSite.NotificationSite.Config;
 
 import lombok.Getter;
 
-// SiteUser 로그인 사용자에게 권한 부여
+//  로그인 사용자에게 권한 부여
 @Getter
 public enum UserRole {
     ADMIN("ROLE_ADMIN"),
