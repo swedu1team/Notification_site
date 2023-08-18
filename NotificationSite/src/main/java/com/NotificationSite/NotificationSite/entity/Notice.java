@@ -16,7 +16,7 @@ public class Notice {
 
     private String CONTENT; // 공지 내용
 
-    private String USER_ID; // 작성자 id
+    // private String USER_ID; // 작성자 id
 
     private String MEET_DAY; //공지 날짜
 

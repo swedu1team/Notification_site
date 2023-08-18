@@ -192,7 +192,7 @@
       <workItem from="1692171615022" duration="1586000" />
       <workItem from="1692191493283" duration="1084000" />
       <workItem from="1692332895534" duration="7901000" />
-      <workItem from="1692363511482" duration="7644000" />
+      <workItem from="1692363511482" duration="9208000" />
     </task>
     <task id="LOCAL-00001" summary="공지사항목록, 회원가입 DB 생성">
       <created>1691986771724</created>
@@ -236,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692194328436</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="로그인 후 공지사항 작성할 수 있도록 수정">
+      <created>1692371684110</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1692371684110</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +280,8 @@
     <MESSAGE value="로그인, 로그아웃 기능 추가" />
     <MESSAGE value="FIX: gitignore 보안 관련 수정" />
     <MESSAGE value="FIX: gitignore 보안 관련 수정4" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: gitignore 보안 관련 수정4" />
+    <MESSAGE value="로그인 후 공지사항 작성할 수 있도록 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인 후 공지사항 작성할 수 있도록 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
