@@ -7,12 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.io.Serializable;
 
 
 @Getter
 @Setter
 @Entity
-public class SiteUser  {
+public class SiteUser implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +27,9 @@ public class SiteUser  {
     @Column(unique = true)
     private String email;
 
-
+    //username을 toString 함수를 통해서 그대로 출력시킨다.
+    @Override
+    public String toString(){
+        return getUsername();
+    }
 }
