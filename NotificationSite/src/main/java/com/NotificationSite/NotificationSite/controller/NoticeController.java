@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 
 @RequestMapping("/notice")
-@RequiredArgsConstructor //
+@RequiredArgsConstructor
 @Controller
 public class NoticeController {
 
@@ -29,6 +29,7 @@ public class NoticeController {
         return "notice_list";
     }
 
+    @PreAuthorize("isAuthenticated()")
     //공지사항 작성 html과 연결
     @GetMapping("/noticewrite")
     public String noticeWriteForm() {

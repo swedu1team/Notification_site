@@ -5,7 +5,9 @@ import com.NotificationSite.NotificationSite.service.UserService;
 //import io.swagger.v3.oas.annotations.Operation;
 //import io.swagger.v3.oas.annotations.tags.Tag;
 //import jakarta.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -21,6 +23,7 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
 
     private final UserService userService;
 
@@ -66,7 +69,7 @@ public class UserController {
             return "signup_form";
         }
 
-        return "redirect:/";
+        return "redirect:/notice/list";
     }
 
    /* @GetMapping("/login")
