@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="공지사항 작성, 수정 기능 완료 및 Notice관련 entity 명칭 수정">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-08-16_PM_11_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-08-16_PM_11_15.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/DataNotFoundException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Form/NoticeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Form/NoticeForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/SiteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/SiteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/OauthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/OauthUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/service/NoticeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/application-oauth.yml" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/application-oauth.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticemodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticemodify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/login_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/login_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/notice_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/notice_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticeview.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticeview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticewrite.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticewrite.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +31,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/NotificationSite">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -68,6 +67,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -188,8 +195,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.NotificationSiteApplication" />
-        <item itemvalue="Gradle.NotificationSite [dependencies]" />
         <item itemvalue="JUnit.NoticeControllerTest" />
+        <item itemvalue="Gradle.NotificationSite [dependencies]" />
       </list>
     </recent_temporary>
   </component>

@@ -43,7 +43,6 @@ public class SecurityConfig {
     private final OAuth2UserService oAuth2UserService;
     private final ObjectMapper objectMapper;
 
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http

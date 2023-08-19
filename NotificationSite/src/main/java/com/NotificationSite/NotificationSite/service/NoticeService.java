@@ -47,6 +47,11 @@ public class NoticeService {
         return noticeRepository.findById(id).get();
     }
 
+    //공지사항 삭제
+    public void delete(Notice notice){
+        this.noticeRepository.delete(notice);
+    }
+
 
     public Page<NoticeList> getList(int page) {
         List<Sort.Order> sorts = new ArrayList<>();
