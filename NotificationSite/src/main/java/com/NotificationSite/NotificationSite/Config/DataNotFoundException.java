@@ -9,8 +9,5 @@ public class DataNotFoundException extends RuntimeException {
     public DataNotFoundException(String message) {
         super(message);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 67257023daecb14042d018d611e43c9a109e638e
+
