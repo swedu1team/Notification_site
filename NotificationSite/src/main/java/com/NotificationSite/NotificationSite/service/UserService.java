@@ -1,6 +1,7 @@
 package com.NotificationSite.NotificationSite.service;
 
 import com.NotificationSite.NotificationSite.Config.DataNotFoundException;
+import com.NotificationSite.NotificationSite.Config.DataNotFoundException;
 import com.NotificationSite.NotificationSite.entity.SiteUser;
 import com.NotificationSite.NotificationSite.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
