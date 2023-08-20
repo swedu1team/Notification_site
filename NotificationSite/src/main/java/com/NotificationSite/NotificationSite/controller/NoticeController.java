@@ -87,7 +87,7 @@ public class NoticeController {
     public String noticeDelete(@PathVariable("id") Integer id, Principal principal){
         Notice notice = this.noticeService.noticeView(id);
 
-        if(!notice.getUsername().getUsername().equals(principal.getName())) {
+        if(!notice.getSiteUser().getUsername().equals(principal.getName())) {
             return "redirect:/notice/list";  //수정권한이 없으면 list로 이동
         }
 
