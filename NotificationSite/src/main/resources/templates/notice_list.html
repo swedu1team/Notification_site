@@ -46,8 +46,8 @@
             <a th:href="@{|/notice/noticeview/${notice.id}|}" th:text="${notice.meetSubject}"></a>
           </td>
           <td><span th:if="${notice.siteUser != null}" th:text="${notice.siteUser.username}"></span></td>
-          <td th:text="${#temporals.format(notice.createDate, 'yyyy-MM-dd HH:mm')}"></td>
           <td th:text="${notice.meetDay}"></td>
+          <td th:text="${#temporals.format(notice.createDate, 'yyyy-MM-dd HH:mm')}"></td>
           <td ><span th:text="${notice.meetPlace}"></span></td>
         </tr>
       </tbody>

@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class NoticeService {
         notice1.setMeetPlace(notice.getMeetPlace());
         notice1.setContent(notice.getContent());
         notice1.setSiteUser(author);
+        notice1.setCreateDate(LocalDateTime.now());
         this.noticeRepository.save(notice1);
     }
 
