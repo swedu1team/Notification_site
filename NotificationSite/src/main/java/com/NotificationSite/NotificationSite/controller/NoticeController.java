@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 
 @RequestMapping("/notice")
-@RequiredArgsConstructor //
+@RequiredArgsConstructor
 @Controller
 public class NoticeController {
 
@@ -28,6 +28,7 @@ public class NoticeController {
         return "notice_list";
     }
 
+    @PreAuthorize("isAuthenticated()")
     //공지사항 작성 html과 연결
     @GetMapping("/noticewrite")
     public String noticeWriteForm() {
@@ -63,6 +64,7 @@ public class NoticeController {
         return "noticemodify";
     }
 
+    //공지사항 수정내용 업데이트
     @PreAuthorize("isAuthenticated()")
     @PostMapping("/noticeupdate/{id}")
     public String noticeUpdate(Notice notice, @PathVariable("id") Integer id, Principal principal){
@@ -76,6 +78,20 @@ public class NoticeController {
 
         noticeService.modiwrite(temp);
 
+        return "redirect:/notice/list";
+    }
+
+    //공지사항 삭제
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("/noticedelete/{id}")
+    public String noticeDelete(@PathVariable("id") Integer id, Principal principal){
+        Notice notice = this.noticeService.noticeView(id);
+
+        if(!notice.getUsername().getUsername().equals(principal.getName())) {
+            return "redirect:/notice/list";  //수정권한이 없으면 list로 이동
+        }
+
+        this.noticeService.delete(notice);
         return "redirect:/notice/list";
     }
 }

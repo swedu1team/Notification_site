@@ -16,6 +16,7 @@ public class OauthUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
+
     @Column(nullable = false)
     private String username;
 
@@ -23,6 +24,5 @@ public class OauthUser {
     private String email;
 
     private String picture;
-
 
 }
