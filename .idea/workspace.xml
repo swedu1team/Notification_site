@@ -4,159 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="공지사항 작성, 수정 기능 완료 및 Notice관련 entity 명칭 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-08-16_PM_11_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-08-16_PM_11_15.xml" afterDir="false" />
+    <list default="true" id="c9b7bc61-911e-498e-a3b0-33926e44d498" name="Changes" comment="notice list 확인 및 Notice엔티티 foreign 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/OauthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/entity/OauthUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/java/com/NotificationSite/NotificationSite/service/NoticeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/application-oauth.yml" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/application-oauth.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/login_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/login_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/notice_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/notice_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticeview.html" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationSite/src/main/resources/templates/noticeview.html" afterDir="false" />
     </list>
-=======
-    <list default="true" id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="" />
->>>>>>> 67257023daecb14042d018d611e43c9a109e638e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/NotificationSite">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$/NotificationSite">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NotificationSite" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="AnnotationType" />
-        <option value="Enum" />
-        <option value="HTML File" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="51046a639cc47565d48ea72eed386bd49e457b5a" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2TvHrWpZyPkZY8JUtGy4XnE3CUa" />
+  <component name="ProjectId" id="2TvmW9q8NWMkDRumNF1fsW20Q1Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/고병국/project/sbb&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4289253d6e3899ba045b2f165b07ccd3&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
-    ]
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.NotificationSite.NotificationSite.Form" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\고병국\project\Notification_site\NotificationSite\src\main\resources\static" />
-    </key>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NoticeSite" />
   </component>
-  <component name="RunManager" selected="Application.NotificationSiteApplication">
-    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
-      <option name="appName" />
-      <option name="appServicePlanName" />
-      <option name="appServicePlanResourceGroup" />
-      <option name="appSettingsKey" value="e85886a2-b417-44c2-977a-8c11840d36f9" />
-      <option name="artifact" />
-      <option name="debugOptions" />
-      <option name="deployment" />
-      <option name="deploymentStagingDirectoryPath" />
-      <option name="funcPath" />
-      <option name="functionHostArguments" />
-      <option name="hostJsonPath" />
-      <option name="insightsName" />
-      <option name="instrumentationKey" />
-      <option name="javaVersion" />
-      <option name="localSettingsJsonPath" />
-      <option name="moduleName" />
-      <option name="os" />
-      <option name="pricingTier" />
-      <option name="providerMap">
-        <map />
-      </option>
-      <option name="region" />
-      <option name="resourceGroup" />
-      <option name="stagingFolder" />
-      <option name="subscription" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="NotificationSiteApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.NotificationSite.NotificationSite.NotificationSiteApplication" />
       <module name="NotificationSite.main" />
@@ -170,189 +37,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificationSite [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/NotificationSite" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="NoticeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NotificationSite.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.NotificationSite.NotificationSite.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.NotificationSite.NotificationSite" />
-      <option name="MAIN_CLASS_NAME" value="com.NotificationSite.NotificationSite.NoticeControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NotificationSiteApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="NotificationSite.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.NotificationSite.NotificationSite.NotificationSiteApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.NotificationSite.NotificationSite.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.NotificationSiteApplication" />
-<<<<<<< HEAD
-        <item itemvalue="JUnit.NoticeControllerTest" />
-        <item itemvalue="Gradle.NotificationSite [dependencies]" />
-=======
-        <item itemvalue="Spring Boot.NotificationSiteApplication" />
-        <item itemvalue="JUnit.NoticeControllerTest" />
-        <item itemvalue="Gradle.NotificationSite [dependencies]" />
-        <item itemvalue="Spring Boot.NotificationSiteApplication" />
->>>>>>> 67257023daecb14042d018d611e43c9a109e638e
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef6b4791-d7fb-4256-a612-6c8de9892152" name="Changes" comment="" />
-      <created>1691916834611</created>
+      <changelist id="c9b7bc61-911e-498e-a3b0-33926e44d498" name="Changes" comment="" />
+      <created>1691931958637</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1691916834611</updated>
-      <workItem from="1691985047577" duration="83000" />
-      <workItem from="1691985166391" duration="3670000" />
-      <workItem from="1691989097964" duration="474000" />
-      <workItem from="1691989600634" duration="1690000" />
-      <workItem from="1691991384814" duration="439000" />
-      <workItem from="1691991856591" duration="2139000" />
-      <workItem from="1691994235676" duration="7238000" />
-      <workItem from="1692017134700" duration="1966000" />
-      <workItem from="1692019533738" duration="978000" />
-      <workItem from="1692021859184" duration="124000" />
-      <workItem from="1692082156204" duration="6309000" />
-      <workItem from="1692088819636" duration="10125000" />
-      <workItem from="1692103083490" duration="9697000" />
-      <workItem from="1692150723844" duration="7767000" />
-      <workItem from="1692171615022" duration="1586000" />
-      <workItem from="1692191493283" duration="1084000" />
-      <workItem from="1692332895534" duration="7901000" />
-      <workItem from="1692363511482" duration="9208000" />
+      <updated>1691931958637</updated>
     </task>
-    <task id="LOCAL-00001" summary="공지사항목록, 회원가입 DB 생성">
-      <created>1691986771724</created>
+    <task id="LOCAL-00001" summary="notice list 확인 및 Notice엔티티 foreign 수정">
+      <created>1692610153056</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1691986771725</updated>
+      <updated>1692610153056</updated>
     </task>
-    <task id="LOCAL-00002" summary="회원가입기능 추가">
-      <created>1692000369465</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1692000369465</updated>
-    </task>
-    <task id="LOCAL-00003" summary="의존성 수정">
-      <created>1692000803112</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1692000803112</updated>
-    </task>
-    <task id="LOCAL-00004" summary="signup_form.html 추가">
-      <created>1692003399733</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1692003399733</updated>
-    </task>
-    <task id="LOCAL-00005" summary="로그인, 로그아웃 기능 추가">
-      <created>1692018959907</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1692018959907</updated>
-    </task>
-    <task id="LOCAL-00006" summary="FIX: gitignore 보안 관련 수정">
-      <created>1692194328436</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1692194328436</updated>
-    </task>
-    <task id="LOCAL-00007" summary="로그인 후 공지사항 작성할 수 있도록 수정">
-      <created>1692371684110</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1692371684110</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/feature/backend_develop" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="공지사항목록, 회원가입 DB 생성" />
-    <MESSAGE value="회원가입기능 추가" />
-    <MESSAGE value="의존성 수정" />
-    <MESSAGE value="signup_form.html 추가" />
-    <MESSAGE value="로그인, 로그아웃 기능 추가" />
-    <MESSAGE value="FIX: gitignore 보안 관련 수정" />
-    <MESSAGE value="FIX: gitignore 보안 관련 수정4" />
-    <MESSAGE value="로그인 후 공지사항 작성할 수 있도록 수정" />
-    <MESSAGE value="공지사항 등록 권한 부여 + 성재님 코드와 merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="공지사항 등록 권한 부여 + 성재님 코드와 merge" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="notice list 확인 및 Notice엔티티 foreign 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="notice list 확인 및 Notice엔티티 foreign 수정" />
   </component>
 </project>

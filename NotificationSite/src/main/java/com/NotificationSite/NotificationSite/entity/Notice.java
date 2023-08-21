@@ -29,7 +29,7 @@ public class Notice {
     private LocalDateTime createDate;
 
     @OneToOne
-    @JoinColumn(name = "siteUser_id")
+    @JoinColumn(name = "username", referencedColumnName = "username")
     private SiteUser siteUser;
 
 }
