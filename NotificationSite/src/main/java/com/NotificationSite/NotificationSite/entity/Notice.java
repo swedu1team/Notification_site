@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -25,7 +26,10 @@ public class Notice {
     @Column(length = 200)
     private String content; //공지 내용
 
-    @ManyToOne
+    private LocalDateTime createDate;
+
+    @OneToOne
     @JoinColumn(name = "username", referencedColumnName = "username")
-    private SiteUser username;
+    private SiteUser siteUser;
+
 }

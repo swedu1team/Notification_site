@@ -17,7 +17,7 @@
 
 <div class="layout">
     <form th:action="@{/notice/noticeupdate/{id}(id=${Notice.id})}" method="post">
-        <div> <p th:text="${Notice.username}"> 작성자 </p> </div>  <!--작성자만 출력-->
+        <div> <p th:text="${Notice.siteUser.username}"> 작성자 </p> </div>  <!--작성자만 출력-->
         <div style="text-align:center;"><input style="width :100%;" name="meetSubject" type="text" th:value="${Notice.meetSubject}"></div>
         <div style="text-align:center;"><input style="width:100%;" name="meetDay" th:value="${Notice.meetDay}" type="date"></div>
         <div style="text-align:center;"><input style="width:100%;" name="meetPlace" th:value="${Notice.meetPlace}" type="text"></div>

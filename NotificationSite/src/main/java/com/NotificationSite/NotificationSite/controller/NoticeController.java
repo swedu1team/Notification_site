@@ -1,7 +1,6 @@
 package com.NotificationSite.NotificationSite.controller;
 
 import com.NotificationSite.NotificationSite.entity.Notice;
-import com.NotificationSite.NotificationSite.entity.NoticeList;
 import com.NotificationSite.NotificationSite.entity.SiteUser;
 import com.NotificationSite.NotificationSite.service.NoticeService;
 import com.NotificationSite.NotificationSite.service.UserService;
@@ -24,7 +23,7 @@ public class NoticeController {
 
     @GetMapping("/list") //
     public String noticeList(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
-        Page<NoticeList> paging = this.noticeService.getList(page);
+        Page<Notice> paging = this.noticeService.getList(page);
         model.addAttribute("paging", paging);
         return "notice_list";
     }
@@ -57,7 +56,7 @@ public class NoticeController {
     @GetMapping("/noticemodify/{id}")
     public String noticeModify(Model model, @PathVariable("id") Integer id, Principal principal){
         Notice notice = noticeService.noticeView(id);
-        if(!notice.getUsername().getUsername().equals(principal.getName())) {
+        if(!notice.getSiteUser().getUsername().equals(principal.getName())) {
             return "redirect:/notice/list";  //수정권한이 없으면 list로 이동
         }
 
@@ -88,7 +87,7 @@ public class NoticeController {
     public String noticeDelete(@PathVariable("id") Integer id, Principal principal){
         Notice notice = this.noticeService.noticeView(id);
 
-        if(!notice.getUsername().getUsername().equals(principal.getName())) {
+        if(!notice.getSiteUser().getUsername().equals(principal.getName())) {
             return "redirect:/notice/list";  //수정권한이 없으면 list로 이동
         }
 

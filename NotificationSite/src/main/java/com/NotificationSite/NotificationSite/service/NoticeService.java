@@ -1,9 +1,7 @@
 package com.NotificationSite.NotificationSite.service;
 
 import com.NotificationSite.NotificationSite.entity.Notice;
-import com.NotificationSite.NotificationSite.entity.NoticeList;
 import com.NotificationSite.NotificationSite.entity.SiteUser;
-import com.NotificationSite.NotificationSite.repository.NoticeListRepository;
 import com.NotificationSite.NotificationSite.repository.NoticeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +18,6 @@ import java.util.List;
 public class NoticeService {
     @Autowired
     private NoticeRepository noticeRepository;
-    @Autowired
-    private NoticeListRepository noticeListRepository;
 
     //공지사항 작성
     public void write(Notice notice, SiteUser author){
@@ -29,7 +26,8 @@ public class NoticeService {
         notice1.setMeetDay(notice.getMeetDay());
         notice1.setMeetPlace(notice.getMeetPlace());
         notice1.setContent(notice.getContent());
-        notice1.setUsername(author);
+        notice1.setSiteUser(author);
+        notice1.setCreateDate(LocalDateTime.now());
         this.noticeRepository.save(notice1);
     }
 
@@ -53,10 +51,10 @@ public class NoticeService {
     }
 
 
-    public Page<NoticeList> getList(int page) {
+    public Page<Notice> getList(int page) {
         List<Sort.Order> sorts = new ArrayList<>();
         sorts.add(Sort.Order.desc("createDate"));
         Pageable pageable = PageRequest.of(page, 10, Sort.by(sorts));
-        return this.noticeListRepository.findAll(pageable);
+        return this.noticeRepository.findAll(pageable);
     }
 }
